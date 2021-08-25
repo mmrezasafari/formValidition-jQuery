@@ -1,83 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./bootstrap-4.3.1/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>signup form</title>
-  </head>
-  <body>
-    <div
-      class="container-fluid h-100"
-      style="background-color: rgba(231, 228, 228, 0.438)"
-    >
-      <div class="w-100 h-100 d-flex justify-content-center align-items-center">
-        <div class="main-form rounded p-3">
-          <div class="d-flex flex-column justify-content-between">
-            <div class="signup-text text-white text-center pb-3">
-              SignUp Form
-            </div>
-            <div class="col-12 mx-auto">
-              <form id="my-form">
-                <div class="form-group">
-                  <label for="username-input">Username</label>
-                  <input
-                    name="username"
-                    type="text"
-                    class="form-control"
-                    id="username-input"
-                  />
-                  <small class="text-danger" id="username-error"></small>
-                </div>
-                <div class="form-group">
-                  <label for="email-input">Email</label>
-                  <input
-                    name="email"
-                    type="email"
-                    class="form-control"
-                    id="email-input"
-                    
-                  />
-                  <small id="email-help" class="form-text"
-                    >We'll never share your email with anyone else</small
-                  >
-                  <small class="text-danger" id="email-error"></small>
-                </div>
-                <div class="form-group">
-                  <label for="password-input">Password</label>
-                  <input
-                    name="password"
-                    type="password"
-                    class="form-control"
-                    id="password-input"
-                  />
-                  <small class="text-danger" id="password-error"></small>
-                </div>
-                <div class="form-group">
-                  <label for="password-input">Verify password</label>
-                  <input
-                    name="verify-password"
-                    type="password"
-                    class="form-control"
-                    id="verifypassword-input"
-                  />
-                  <small class="text-danger" id="verifypassword-error"></small>
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" id="check-input" />
-                  <label for="check-input">Check me out</label>
-                  <small id="checkbox-error"></small>
-                </div>
-                <small class="text-danger" id="passwordsame-error"></small>
-                <button type="submit" class="btn col-12 mb-3">Submit</button>
-              </form>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./bootstrap-4.3.1/dist/css/bootstrap.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <p class="text-center">
+    FORM VALIDATION USING JQUERY
+  </p>
+
+  <div class="container">
+    <div class="col-lg-8 m-auto d-block">
+      <form id="my-form">
+        <div class="form-group">
+            <label for ="user">
+              Username: 
+            </label>
+            <input type="text"
+                  name="username" id="usernames"
+                  class="form-control">
+                  <small class="text-danger form-error" id="usercheck"></small>
         </div>
-      </div>
+
+        <div class="form-group">
+            <label for="user">
+                  Email: 
+            </label>
+            <input name="email"
+              id="email" 
+              class="form-control">
+              <small class="text-danger form-error" id="emailcheck"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="password"> 
+                  Password:
+            </label>
+            <input type="password" name="pass" 
+              id="password" class="form-control">
+              <small class="text-danger form-error" id="passwordcheck"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="conpassword"> 
+                  Confirm Password: 
+            </label>
+            <input type="password" name="username"
+                  id="conpassword" class="form-control">
+                  <small class="text-danger form-error" id="repasswordcheck"></small>
+        </div>
+
+        <input type="submit" id="submitbtn" 
+           value="Submit" class="btn btn-primary">   
+      </form>
     </div>
-    <script src="./app.js"></script>
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
 </html>
